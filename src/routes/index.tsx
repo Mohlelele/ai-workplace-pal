@@ -15,11 +15,11 @@ export const Route = createFileRoute("/")({
         content:
           "One workspace for AI-drafted emails, prioritised work schedules, and a workplace chatbot. No login and no saved data.",
       },
-      { property: "og:title", content: "AI Workplace Productivity Assistant" },
+      { property: "og:title", content: "Dashboard | AI Workplace Productivity Assistant" },
       {
         property: "og:description",
         content:
-          "Draft emails, plan your week, and chat with a work-focused AI assistant — session-only, no sign-up.",
+          "One workspace for AI-drafted emails, prioritised work schedules, and a workplace chatbot. No login and no saved data.",
       },
     ],
   }),

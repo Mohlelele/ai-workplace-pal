@@ -80,14 +80,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "AI Workplace Productivity Assistant" },
+      { title: "Dashboard | AI Workplace Productivity Assistant" },
       {
         name: "description",
         content:
-          "Draft workplace emails, plan your day or week, and chat with a work-focused AI assistant. No sign-up, no saved data.",
+          "One workspace for AI-drafted emails, prioritised work schedules, and a workplace chatbot. No login and no saved data.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Dashboard | AI Workplace Productivity Assistant" },
+      { name: "twitter:title", content: "Dashboard | AI Workplace Productivity Assistant" },
+      { property: "og:description", content: "One workspace for AI-drafted emails, prioritised work schedules, and a workplace chatbot. No login and no saved data." },
+      { name: "twitter:description", content: "One workspace for AI-drafted emails, prioritised work schedules, and a workplace chatbot. No login and no saved data." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d2dc6d46-60b4-48aa-87ae-c3030c3e229a/id-preview-210eecad--127a7b3f-64f6-476e-86bc-f9e549b9a816.lovable.app-1786022256225.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d2dc6d46-60b4-48aa-87ae-c3030c3e229a/id-preview-210eecad--127a7b3f-64f6-476e-86bc-f9e549b9a816.lovable.app-1786022256225.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
