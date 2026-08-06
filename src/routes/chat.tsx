@@ -3,6 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { DefaultChatTransport, type UIMessage } from "ai";
 import { Check, Copy, Loader2, Pencil, RefreshCw, SendHorizontal, Sparkles, Trash2 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import Markdown from "react-markdown";
 import { toast } from "sonner";
 
 import { DISCLAIMER, DisclaimerNotice } from "@/components/disclaimer-notice";
@@ -98,10 +99,10 @@ function ChatPage() {
   return (
     <>
       <TopBar title="AI Chatbot" subtitle="Session-only workplace assistant" />
-      <main className="mx-auto flex w-full max-w-4xl flex-1 flex-col gap-4 px-4 py-6 md:px-6 md:py-8">
+      <main className="mx-auto flex h-[calc(100dvh-4rem)] w-full max-w-4xl flex-1 flex-col gap-4 overflow-hidden px-4 py-4 md:px-6 md:py-6">
         <DisclaimerNotice />
 
-        <Card className="flex min-h-[55vh] flex-1 flex-col overflow-hidden py-0 shadow-[var(--shadow-card)]">
+        <Card className="flex min-h-0 flex-1 flex-col overflow-hidden py-0 shadow-[var(--shadow-card)]">
           <CardContent className="flex-1 space-y-4 overflow-y-auto px-4 py-5 md:px-6">
             {messages.length === 0 && (
               <div className="flex h-full flex-col items-center justify-center gap-4 py-10 text-center">
@@ -163,9 +164,15 @@ function ChatPage() {
                         </div>
                       </div>
                     ) : (
-                      <p className="whitespace-pre-wrap">
-                        {text || (busy && !isUser ? "Thinking…" : "")}
-                      </p>
+                      isUser ? (
+                        <p className="whitespace-pre-wrap">{text}</p>
+                      ) : text ? (
+                        <div className="space-y-2 [&_a]:underline [&_h1]:text-base [&_h1]:font-semibold [&_h2]:text-sm [&_h2]:font-semibold [&_h3]:text-sm [&_h3]:font-semibold [&_li]:ml-4 [&_li]:list-disc [&_ol>li]:list-decimal [&_strong]:font-semibold">
+                          <Markdown>{text}</Markdown>
+                        </div>
+                      ) : (
+                        <span className="text-muted-foreground">Thinking…</span>
+                      )
                     )}
                   </div>
 
