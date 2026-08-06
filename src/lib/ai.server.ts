@@ -3,7 +3,7 @@ import { streamText } from "ai";
 import {
   createLovableResponsesProvider,
   DEFAULT_MODEL,
-  RESPONSES_PROVIDER_OPTIONS,
+  RESPONSES_FAST_OPTIONS,
 } from "./ai-gateway.server";
 
 const TONE_GUIDES = {
@@ -83,7 +83,7 @@ export async function runGeneration({ system, prompt }: { system: string; prompt
       model: provider.responses(DEFAULT_MODEL),
       system,
       prompt,
-      providerOptions: RESPONSES_PROVIDER_OPTIONS,
+      providerOptions: RESPONSES_FAST_OPTIONS,
     });
 
     const text = await result.text;

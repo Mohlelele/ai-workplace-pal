@@ -165,3 +165,8 @@ export const RESPONSES_PROVIDER_OPTIONS = {
     include: ["reasoning.encrypted_content"],
   },
 } satisfies Record<string, Record<string, string | boolean | string[]>>;
+
+/** One-shot generations: no reasoning, for lower latency. */
+export const RESPONSES_FAST_OPTIONS = {
+  openai: { store: false },
+} satisfies Record<string, Record<string, boolean>>;
