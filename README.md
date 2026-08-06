@@ -1,136 +1,160 @@
-# AI Workplace Pal
+# AI Workplace Productivity Assistant
 
-Build a modern, responsive SaaS-style web application called AI Workplace Productivity Assistant.
+## Project Overview
 
-The application should not require user registration or login, and must not use a database. All data should exist only during the current browser session (temporary state only).
+The **AI Workplace Productivity Assistant** is a modern, responsive web application designed to help professionals automate common workplace tasks using Artificial Intelligence. The platform provides AI-powered tools for generating professional emails, planning daily or weekly tasks, and interacting with an intelligent workplace assistant through a conversational interface.
 
-Features
+The application follows a clean Software-as-a-Service (SaaS) design philosophy, emphasizing simplicity, usability, and productivity. It is lightweight and requires **no user registration, authentication, or database**, allowing users to access its features immediately.
 
-1. Smart Email Generator
+---
 
-Generate professional workplace emails.
+## Features Implemented
 
-Support three tones:
+### Smart Email Generator
 
-Formal
+* Generate professional workplace emails using AI.
+* Support for multiple writing tones:
 
-Friendly
+  * Formal
+  * Friendly
+  * Persuasive
+* Editable AI-generated output.
+* Copy and regenerate functionality.
 
-Persuasive
+### AI Task Planner
 
-Input fields:
+* Generate daily or weekly work schedules.
+* Prioritize tasks based on High, Medium, or Low priority.
+* Organize workloads into structured plans.
+* Editable task schedules.
 
-Recipient
+### AI Chatbot Interface
 
-Purpose
+* Interactive AI workplace assistant.
+* Responds to user prompts and workplace-related questions.
+* Session-based conversation history.
+* Editable and copyable responses.
 
-Additional Context
+### User Interface
 
-Display editable AI-generated output.
+* Modern SaaS-inspired dashboard.
+* Responsive design for desktop, tablet, and mobile devices.
+* Sidebar navigation.
+* Professional card-based layout.
+* Light Blue and Yellow color theme.
+* Responsible AI disclaimer.
 
-2. AI Task Planner
+---
 
-Generate daily or weekly work schedules.
+## Technologies and Tools Used
 
-Prioritize tasks by High, Medium, or Low priority.
+### Frontend
 
-Inputs:
+* React
+* TypeScript
+* Tailwind CSS
+* HTML5
+* CSS3
 
-Goal
+### AI Integration
 
-Planning Period (Daily/Weekly)
+* OpenAI API (or compatible AI service)
 
-Priority
+### Development Tools
 
-Available Working Hours
+* Lovable
+* Git
+* GitHub
+* Visual Studio Code
 
-Display editable AI-generated schedule.
+---
 
-3. AI Chatbot
+## Setup Instructions
 
-Interactive workplace AI assistant.
+### 1. Clone the Repository
 
-Accept user prompts and provide AI responses.
+```bash
+git clone https://github.com/your-username/ai-workplace-productivity-assistant.git
+```
 
-Maintain conversation only during the current session.
+### 2. Navigate to the Project
 
-Responses should be editable and copyable.
+```bash
+cd ai-workplace-productivity-assistant
+```
 
-User Interface
+### 3. Install Dependencies
 
-Create a clean, modern SaaS dashboard with:
+```bash
+npm install
+```
 
-Responsive design
+### 4. Configure Environment Variables
 
-Left sidebar navigation
+Create a `.env` file and add your AI API key.
 
-Top navigation bar
+```env
+OPENAI_API_KEY=your_api_key_here
+```
 
-Dashboard home page
+### 5. Run the Development Server
 
-Card-based layout
-
-Rounded corners and subtle shadows
-
-Professional typography
-
-Color Scheme
-
-Primary: Light Blue
-
-Accent: Soft Yellow
-
-Background: White
-
-Text: Dark Gray
-
-AI Experience
-
-Use structured prompts internally for each AI feature.
-
-All AI outputs must be editable.
-
-Include Copy and Regenerate actions for generated content.
-
-Responsible AI
-
-Display the following disclaimer throughout the application:
-
-AI-generated content may contain inaccuracies. Always review and verify outputs before using them for professional or business purposes. Do not enter confidential or sensitive information.
-
-Constraints
-
-No authentication.
-
-No user accounts.
-
-No database.
-
-No data persistence.
-
-No backend storage.
-
-Keep the application lightweight and suitable for a free Lovable project.
-
-Goal: Build a polished, professional AI productivity assistant with three core tools (Email Generator, Task Planner, and AI Chatbot) that feels like a modern SaaS application while remaining simple enough for Lovable's free plan.
-
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/127a7b3f-64f6-476e-86bc-f9e549b9a816).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+```bash
 npm run dev
 ```
+
+### 6. Open the Application
+
+Visit:
+
+```
+http://localhost:3000
+```
+
+---
+
+## Project Design
+
+The application follows a modern SaaS interface with:
+
+* Responsive layout
+* Sidebar navigation
+* Dashboard homepage
+* Structured AI prompts
+* Editable AI outputs
+* Session-only data storage
+* No authentication
+* No database
+* No persistent user data
+
+---
+
+## Responsible AI
+
+This application uses Artificial Intelligence to assist users with workplace productivity tasks.
+
+> **AI-generated content may contain inaccuracies or incomplete information. Users should always review and verify generated outputs before using them for professional, legal, financial, or business purposes. Do not enter confidential or sensitive information into AI prompts.**
+
+---
+
+## Future Improvements
+
+* Meeting Notes Summarizer
+* AI Research Assistant
+* Dark Mode
+* Export to PDF and DOCX
+* Voice Input
+* Prompt Templates
+* Multi-language Support
+
+---
+
+## Author
+
+**Mosebjadi Sello**
+
+---
+
+## License
+
+This project is intended for educational and portfolio purposes.
