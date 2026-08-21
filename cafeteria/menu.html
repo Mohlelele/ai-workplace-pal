@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu | LunchLinx</title>
+  <meta name="description" content="Browse the LunchLinx cafeteria menu: meals, snacks, and drinks for Richfield students and lecturers." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">🍽️</span>
+        <span>LunchLinx</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html" class="active">Menu</a></li>
+          <li><a href="order.html">Cart <span class="cart-badge">0</span></a></li>
+          <li><a href="track.html">Track</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">Today's menu</h2>
+    <p class="section-subtitle">Tap a category, then add items to your cart.</p>
+
+    <div class="category-tabs">
+      <button class="tab active" data-category="all">All</button>
+      <button class="tab" data-category="meals">Meals</button>
+      <button class="tab" data-category="snacks">Snacks</button>
+      <button class="tab" data-category="drinks">Drinks</button>
+    </div>
+
+    <div id="menu-grid" class="menu-grid"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 LunchLinx — Richfield Campus Cafeteria. Built for educational purposes.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

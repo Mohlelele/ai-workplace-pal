@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Track Order | LunchLinx</title>
+  <meta name="description" content="Track your LunchLinx cafeteria order status at Richfield." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">🍽️</span>
+        <span>LunchLinx</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="order.html">Cart <span class="cart-badge">0</span></a></li>
+          <li><a href="track.html" class="active">Track</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">Track your order</h2>
+    <p class="section-subtitle">Enter your order number to see the latest status.</p>
+
+    <div class="tracker">
+      <div class="form-group">
+        <label for="order-id">Order number</label>
+        <div style="display:flex;gap:0.75rem">
+          <input type="text" id="order-id" placeholder="e.g. LL1001" />
+          <button id="track-btn" class="btn btn-primary">Track</button>
+        </div>
+      </div>
+      <p style="color:var(--muted);font-size:0.85rem;margin-top:0.75rem">Try demo order <strong>LL1001</strong> if you have not placed an order yet.</p>
+    </div>
+
+    <div id="track-result"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 LunchLinx — Richfield Campus Cafeteria. Built for educational purposes.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
