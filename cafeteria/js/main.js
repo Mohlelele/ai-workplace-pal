@@ -140,6 +140,7 @@ function renderMenu(category = "all") {
 function renderCart() {
   const container = document.getElementById("cart-items");
   const totalEl = document.getElementById("cart-total");
+  const summary = document.getElementById("cart-summary");
   if (!container) return;
 
   const cart = getCart();
@@ -151,8 +152,10 @@ function renderCart() {
       </div>
     `;
     if (totalEl) totalEl.textContent = "R0";
+    if (summary) summary.style.display = "none";
     return;
   }
+  if (summary) summary.style.display = "block";
 
   container.innerHTML = cart
     .map(
