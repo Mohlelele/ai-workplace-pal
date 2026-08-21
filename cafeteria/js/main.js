@@ -329,7 +329,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initCategoryTabs();
   }
 
-  if (document.get"ElementById("cart-items")) {
+  if (document.getElementById("cart-items")) {
     renderCart();
   }
 
