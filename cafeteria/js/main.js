@@ -16,6 +16,17 @@ const MENU_ITEMS = [
   { id: 9, name: "Fresh Juice", desc: "Orange or apple juice, freshly squeezed.", price: 25, category: "drinks", emoji: "🧃" },
 ];
 
+function getItemIcon(item) {
+  const color = "var(--brand-red)";
+  const common = `width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"`;
+  const icons = {
+    meals: `<svg ${common}><path d="M3 6h18M3 12h18M3 18h18"/></svg>`,
+    snacks: `<svg ${common}><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>`,
+    drinks: `<svg ${common}><path d="M6 3h12l-2 18H8L6 3z"/><path d="M9 3v18"/></svg>`,
+  };
+  return icons[item.category] || icons.meals;
+}
+
 function getCart() {
   try {
     return JSON.parse(localStorage.getItem(STORAGE_KEYS.cart)) || [];
