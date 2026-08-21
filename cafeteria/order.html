@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart | LunchLinx</title>
+  <meta name="description" content="Review your LunchLinx cart and confirm your cafeteria order for pickup at Richfield." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">🍽️</span>
+        <span>LunchLinx</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="order.html" class="active">Cart <span class="cart-badge">0</span></a></li>
+          <li><a href="track.html">Track</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">Your cart</h2>
+    <p class="section-subtitle" id="user-greeting">Review your items and choose a pickup time.</p>
+
+    <div id="cart-items" class="cart-list"></div>
+
+    <div id="cart-summary" style="display:none">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cart-total">R0</span>
+      </div>
+
+      <form id="order-form" style="margin-top:1.5rem">
+        <div class="form-group">
+          <label for="pickup-time">Preferred pickup time</label>
+          <select id="pickup-time" required>
+            <option value="">Select a time slot</option>
+            <option value="10:00">10:00</option>
+            <option value="10:30">10:30</option>
+            <option value="11:00">11:00</option>
+            <option value="11:30">11:30</option>
+            <option value="12:00">12:00</option>
+            <option value="12:30">12:30</option>
+            <option value="13:00">13:00</option>
+            <option value="13:30">13:30</option>
+            <option value="14:00">14:00</option>
+          </select>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Place order</button>
+          <a href="menu.html" class="btn btn-outline">Add more items</a>
+        </div>
+      </form>
+
+      <p style="margin-top:1rem;color:var(--muted);font-size:0.9rem">
+        Payment will be collected at the cafeteria counter when you pick up your order.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 LunchLinx — Richfield Campus Cafeteria. Built for educational purposes.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

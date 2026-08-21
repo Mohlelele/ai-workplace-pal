@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | LunchLinx</title>
+  <meta name="description" content="Sign in or register for LunchLinx to place orders at the Richfield campus cafeteria." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">🍽️</span>
+        <span>LunchLinx</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="order.html">Cart <span class="cart-badge">0</span></a></li>
+          <li><a href="track.html">Track</a></li>
+          <li><a href="login.html" class="active">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="form-card">
+      <h2 class="section-title" style="text-align:center;margin-bottom:0.5rem">Student / Lecturer Login</h2>
+      <p class="section-subtitle" style="text-align:center">Create a quick profile to place orders.</p>
+
+      <form id="login-form">
+        <div class="form-group">
+          <label for="name">Full name</label>
+          <input type="text" id="name" placeholder="e.g. Jane Dlamini" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" id="email" placeholder="jane@richfield.ac.za" required />
+        </div>
+        <div class="form-group">
+          <label for="role">I am a</label>
+          <select id="role" required>
+            <option value="Student">Student</option>
+            <option value="Lecturer">Lecturer</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%">Continue</button>
+      </form>
+
+      <p style="text-align:center;margin-top:1.25rem;color:var(--muted);font-size:0.9rem">
+        No password required for this demo. Your details are stored only in your browser.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 LunchLinx — Richfield Campus Cafeteria. Built for educational purposes.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
